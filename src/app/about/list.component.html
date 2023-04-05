@@ -1,0 +1,32 @@
+<div class="limiter">
+  <div class="wrap-table100">
+    <div class="table100">
+      <table>
+        <thead>
+          <tr class="table100-head">
+          <th class="column1">No</th>
+          <th class="column2">Vehicle Name</th>
+          <th class="column2">Price</th>
+          <th class="column2">View</th>
+          <th class="column2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor='let group of details?.data; let i = index'>
+          <td class="column1">{{group._id}}</td>
+          <td class="column2">{{group.title}}</td>
+          <td class="column2">{{group.price}}</td>
+          <td class="column2"><a [routerLink]="['/template', group._id]">View</a></td>
+          <!-- <td class="column2"><a target="_blank" (click)="viewReport(group._id)">View</a></td> -->
+          <td class="column2"><span class="btn btn-primary btn-sm " (click)="download(group._id);"><i class="fa fa-download" aria-hidden="true"></i>Downlad</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="loader_mod" *ngIf="loader">
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+  

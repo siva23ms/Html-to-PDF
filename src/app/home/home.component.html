@@ -1,0 +1,50 @@
+<div class="container">
+   <div class="container-table100">
+   <form [formGroup]="loginForm" (ngSubmit)="download()">
+   <div class="row justify-content-md-center custom_top">
+      <div class="col col-sm-7">
+         <div class="form-group mb-3">     
+            <input  type="text"  class="form-control getURL" placeholder="Enter Repot URL" 
+               formControlName="report_url"
+               [ngClass]="{'is-invalid':loginForm.get('report_url').touched && loginForm.get('report_url').invalid}">
+         </div>
+         <div class="error-messages">
+            <ng-container *ngFor="let error of login_error_messages.report_url">
+               <div class="error-message mb-2" *ngIf="loginForm.get('report_url').hasError(error.type) && (loginForm.get('report_url').dirty || loginForm.get('report_url').touched)">
+                  {{ error.message }}
+               </div>
+            </ng-container>
+         </div>
+      </div>
+      <div class="col col-sm-2 ">
+         <div class="form-group row m-t-20  mb-3">
+            <div class="col text-right">
+               <button  class="btn btn-primary w-md waves-effect waves-light w-100" [disabled]="!loginForm.valid" type="submit">
+               Download
+               </button>
+            </div>
+         </div>
+      </div>
+      <div class="col col-sm-9 mt-5">
+         <app-about></app-about>
+      </div>
+   </div>
+   </form>
+   <div class="loader_mod"  *ngIf="loader">
+      <div class="lds-spinner">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+   </div>
+   </div>
+</div>

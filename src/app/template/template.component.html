@@ -1,0 +1,183 @@
+<div class="container-fluid">
+<div class="wrap">
+    <div class="card card_custom ">
+        <div class="header">
+            <nav class="">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="logo logo-pdf text-left">
+                            <img src="{{reports?.logo}}" alt="" class="logo-img">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <span class="nav-title pull-right">{{lNumber}}</span>
+                        <span class="nav-title pull-right" style="padding-right: 15px;">{{rID}}</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="card-body">
+            <div class="row custom_row">
+                <div class="col-6 p-r-5">
+                    <img class="card-img-top img-responsive" src="{{reports?.banneerImageLeft}}" alt="Card image cap">
+                </div>
+                <div class="col-6 p-l-5">
+                    <img class="card-img-top img-responsive" src="{{reports?.banneerImageRight}}" alt="Card image cap">
+                </div>
+                <div class="col-12">
+                    <h5 class="card-title top-header">{{reports?.title}}</h5>
+                    <p class="card-text address-txt">{{reports?.vehicleDetails[0].location}} | {{reports?.vehicleDetails[0].kms}} | {{reports?.vehicleDetails[0].fuelType}} | {{reports?.vehicleDetails[0].driving}} | {{reports?.vehicleDetails[0].color}} | {{reports?.vehicleDetails[0].ownerType}}</p>
+                </div>
+                <div class="col-6">
+                    <p class="selling-txt">{{sPrice}}</p>
+                    <p class="rupee-txt"><span><i class="fa fa-inr" aria-hidden="true"></i></span> {{reports?.price}} <span class="fixed-price">({{fPrice}})</span></p>
+                </div>
+                <div class="col-6" style="padding-bottom: 10px">
+                    <div class="pull-right overall-box">
+                        <p class="overall-txt">Overall</p>
+                        <p class="excellent-txt">Excellent Buy <span><img src="./assets/images/nice-hand.png"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card card_custom" style="margin-top:25px; padding-bottom: 0;">
+        <div class="card-body" style="margin-top:8px;margin-top:8px;padding: 20px 22px;">
+            <div class="row">
+                <div class="col-5 circle">
+                    <div class="rate_star_overall">
+                        <div class="rateicon_overall">
+                            <div>Overall Rating <br>
+                                <span class="overall_rating">{{reports?.rating}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7" style="padding-left: 0px;">
+                    <p class="text-left">Exterior <span class="pull-right">{{reports?.exteriorRating}}</span></p>
+                    <div class="progress">
+                        <div class="progress-bar bg-exterior" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p class="text-left">Interior <span class="pull-right">{{reports?.interiorRating}}</span></p>
+                    <div class="progress">
+                        <div class="progress-bar bg-interior" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p class="text-left">Engine &amp; Transmission <span class="pull-right">{{reports?.engineRating}}</span></p>
+                    <div class="progress">
+                        <div class="progress-bar bg-transmission" role="progressbar" style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="certified">
+                        <p class="refurbished">Certified &amp; Refurbished <span class="shield"><img src="./assets/images/shield.png"></span></p>
+                        <p class="refurbished"><img src="./assets/images/logo.png"><span class="pl-10">Assured Rating</span></p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="certified">
+                        <div class="blocked-div">
+                            <p class="conditions f-left">{{fConditions}}</p>
+                            <p class="conditions f-right">{{gConditions}}</p>
+                        </div>
+                        <div class="blocked-div">
+                            <p class="price f-left"><span><i class="fa fa-inr" aria-hidden="true"></i></span> {{reports?.fairConditions}}</p>
+                            <p class="price f-right"><span><i class="fa fa-inr" aria-hidden="true"></i></span> {{reports?.goodConditions}}</p>
+                        </div>
+                        <div class="blocked-conditions">
+                            <span class="sm-round pull-left"></span>
+                            <span class="sm-line"></span>
+                            <span class="sm-round pull-right"></span>
+                        </div>
+                        <div class="pull-right">
+                            <p class="powered-by">Powered By<span class=""><img src="./assets/images/logo.png"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 text-center">
+                    <div class="benefits">
+                        <img src="./assets/images/flooded.png">
+                        <p>Accident Free / <br>Not Flooded</p>
+                    </div>
+                </div>
+                <div class="col-4 text-center">
+                    <div class="benefits">
+                        <img src="./assets/images/inspected.png">
+                        <p>212 Points <br>Inspected</p>
+                    </div>
+                </div>
+                <div class="col-4 text-center">
+                    <div class="benefits">
+                        <img src="./assets/images/warranty.png">
+                        <p>3 Months <br>Warranty</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12 web_link_button">
+                    <span>{{toKnow}} <a href="#">{{btnLabel}}</a></span>                  
+                </div>                                               
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="card card_custom ">
+        <div class="card-body">
+            <div class="row custom_row">
+                <div class="col-6">
+                    <div class="image" style="position: relative; width: 100%; overflow: hidden">
+                        <img style="width: 100%; height: 300px" src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                        <div class="overlay" style="position: absolute;bottom: 0;padding-left: 25px;padding-top: 15px;width: 100%;color: white;font-size: 20px;z-index: 5">
+                            <p class="amount">$399</p>
+                            <p class="h4">Group Tour in Maldives</p>
+                            <p class="textmuted">Ameeru Ahmed magu male,female</p>
+                            <ul class="list-unstyled d-flex ">
+                                <li><span class="fas fa-star"></span></li>
+                                <li><span class="fas fa-star"></span></li>
+                                <li><span class="fas fa-star"></span></li>
+                                <li><span class="fas fa-star"></span></li>
+                                <li><span class="fas fa-star-half-alt"><span class="ms-2 review">500 reviews</span> </span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 text-center">
+                    <svg height="200" width="200">
+                        <circle cx="100" cy="100" r="80" stroke="#e91e63" stroke-width="3" fill="#20c997" />
+                        Sorry, your browser does not support inline SVG.  
+                    </svg> 
+                </div>
+                <div class="col-12 text-center">
+                    <p class="" style="background: linear-gradient(40deg, rgba(21,97,98,1) 19%, rgba(19,223,221,1) 73%); color: #fff; margin-top: 20px; height: 60px;display: flex;justify-content: center;align-items: center;">This is gradient section</p>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="" style="background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); color: #fff; margin-top: 20px; height: 60px;display: flex;justify-content: center;align-items: center;">This is gradient section</p>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="" style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); color: #fff; margin-top: 20px; height: 60px;display: flex;justify-content: center;align-items: center;">This is gradient section</p>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="" style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); color: #fff; margin-top: 20px; height: 60px;display: flex;justify-content: center;align-items: center;">This is gradient section</p>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="" style="background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); color: #fff; margin-top: 20px; height: 60px;display: flex;justify-content: center;align-items: center;">This is gradient section</p>
+                </div>
+                <div class="col-12">
+                    <div style="display: flex; justify-content: center">
+                        <div style="background-color: #f1f1f1; text-shadow: 2px 2px 8px #FF0000; width: 100px;margin: 10px;text-align: center;line-height: 75px;font-size: 30px;">M</div>
+                        <div style="background-color: #f1f1f1; text-shadow: 2px 2px 8px #FF0000; width: 100px;margin: 10px;text-align: center;line-height: 75px;font-size: 30px;">F</div>
+                        <div style="background-color: #f1f1f1; text-shadow: 2px 2px 8px #FF0000; width: 100px;margin: 10px;text-align: center;line-height: 75px;font-size: 30px;">C</div>
+                        <div style="background-color: #f1f1f1; text-shadow: 2px 2px 8px #FF0000; width: 100px;margin: 10px;text-align: center;line-height: 75px;font-size: 30px;">W</div>
+                        <div style="background-color: #f1f1f1; text-shadow: 2px 2px 8px #FF0000; width: 100px;margin: 10px;text-align: center;line-height: 75px;font-size: 30px;">L</div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
